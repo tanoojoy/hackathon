@@ -1,0 +1,28 @@
+.description{
+    font-family:Arial;
+
+}
+.shoutout{
+    font-weight:bold;
+    
+}
+.shoutout:hover{
+    cursor:pointer;
+    text-decoration:underline;
+}
+.shop{
+    margin-top: 30px;
+    background-color: red;
+    color:aliceblue;
+    text-align:center;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.shop-link{
+    text-decoration:underline;
+    
+}
+.shop-link:hover{
+    cursor:pointer;
+    margin-left:10px;
+}

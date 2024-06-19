@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Learn Javascript</title>
+      <style>
+           .button1, .button2{
+            background:linear-gradient(135deg,#153677,#4e085f);
+            color:white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height:50px;
+            width:100px;
+            cursor:pointer;
+           }
+      </style>
+    </head>
+    <body>
+          <h1>Hello!</h1>
+          <button class="button1" onclick="count()">Count click </button>
+          <button class="button2" onclick="Hello()">CLICK HERE </button>
+            <script>
+                let counter=0;
+                function count(){
+                    counter++;
+                    document.querySelector("button").innerHTML=counter;
+                    if ((counter%10)==0){
+                            alert("Count is "+counter);
+                    }
+                }
+                function Hello(){
+                    const name=document.querySelector("h1");
+                    if (name.innerHTML==="Hello!"){
+                        name.innerHTML="Goodbye!";
+                    }else{
+                        name.innerHTML="Hello!";
+                    }
+                }
+            </script>
+    </body>
+</html>

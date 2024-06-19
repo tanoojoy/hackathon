@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+    </head>
+    <body>
+        <script>
+            var myStr="FirstLine\nSecondLine\nThirdLine";
+            console.log(myStr);
+            //built in function
+            var MyName="Andy Yeung";
+            var MyStr="Hello, I am "+MyName +" \nHow are you?";
+            var length=MyName.length;
+            console.log("Length of name is " +length);
+            var firstLetter=MyName[0];
+            console.log("First letter of my name is "+firstLetter);
+            console.log(MyStr);
+
+            var Adj=" is awesome!"
+            MyName+=Adj;
+            console.log(MyName);
+            //function
+            function functionName(a,b){ //no need to declare
+                console.log("Hello world");
+                console.log("My name is "+a+" "+ b)
+               
+            }
+            function functionName(a,b){ //no need to declare
+               
+                console.log("My name is "+a+" "+ b)
+            }
+            functionName("Andy","Yeung");
+            
+            //function with array
+            function arr(array,item){
+               
+               array.push(item);
+               return array.shift();
+            }
+            var array=[1,2,3,4,5];
+            console.log("Before: " + (array));
+            console.log(arr(array,6));
+            console.log("After: "+(array));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../HTML-CSS"
+		},
+		{
+			"path": "../js-basics"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "js-basics"
+	}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Objects</title>
+    </head>
+    <body>
+     <script>
+        //object can be used as a record 
+        var person={
+                "name":"Andy",
+                "surname":"Yeung",
+                "age":21,
+                "address":"up",
+            }
+            console.log(person.name);
+            person.name="Tony";
+            console.log(person.name);
+            person.gender="Male";
+            delete person.surname;
+            console.log(person);
+
+        //object can be used for lookup
+        function lookup(charac){
+          
+            var names={
+                "a":"andy",
+                "b":"brandon",
+                "c":"chine"
+            };
+            var result=names[charac];
+            return result;
+        }
+        console.log(lookup("a"));
+        // template literal with multi-line and string interpolation
+        const persn={
+            name:"Andy",
+            age:21
+
+        };
+        const greeting="Hello, my name is " + persn.name + " I am "+persn.age;
+        console.log(greeting);
+     </script>
+    </body>
+</html>
