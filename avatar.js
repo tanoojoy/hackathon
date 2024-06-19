@@ -17,5 +17,6 @@ function confirmSelection() {
 }
 
 
-console.log("Harshini")
+console.log("Harshini");
+console.log("Tanoo");
 
