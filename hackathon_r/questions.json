@@ -1,0 +1,83 @@
+[
+    {
+        "difficulty": "easy",
+        "question": "let x = 10; \n let y = 5; \n let result = x + y; \n console.log(result);",
+        "answer1":"15",
+        "answer2":"510",
+        "answer3":"50",
+        "answer4":"Syntax error",
+        "correct_ans": 1
+    },
+    {
+        "difficulty": "easy",
+        "question": "let x = 10; \n let y = 5; \n if(x > y){ \n console.log(y + 5) \n }; \n else{ \n console.log(y); \n  } \n console.log(result);",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 3
+    },
+    {
+        "difficulty": "easy",
+        "question": "",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 4
+    },
+    {
+        "difficulty": "medium",
+        "question": "",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 1
+    },
+    {
+        "difficulty": "medium",
+        "question": "",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 2
+    },
+    {
+        "difficulty": "medium",
+        "question": "",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 2
+    },
+    {
+        "difficulty": "hard",
+        "question": "",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 1
+    },
+    {
+        "difficulty": "hard",
+        "question": "",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 3
+    },
+    {
+        "difficulty":"hard",
+        "question": "",
+        "answer1":"",
+        "answer2":"",
+        "answer3":"",
+        "answer4":"",
+        "correct_ans": 2
+    }
+]
