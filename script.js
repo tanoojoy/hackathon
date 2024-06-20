@@ -25,23 +25,23 @@ window.onload = function() {
 
     // draw background
     var img = new Image();
-    img.src = 'grass.png';  // Replace with the path to your image
+    img.src = 'https://raw.githubusercontent.com/tanoojoy/hackathon/main/grass.png';  // Replace with the path to your image
 
     //draw wall
     var wall = new Image();
-    wall.src = 'block.png';
+    wall.src = 'https://raw.githubusercontent.com/tanoojoy/hackathon/main/block.png';
 
     //draw guy
     var guyImg = new Image();
-    guyImg.src = 'guy.jpg';
+    guyImg.src = 'https://raw.githubusercontent.com/tanoojoy/hackathon/main/guy.jpg';
 
     //draw chest
     var chestImg = new Image();
-    chestImg.src = 'chest.png';
+    chestImg.src = 'https://raw.githubusercontent.com/tanoojoy/hackathon/main/chest.png';
 
     //draw portal
     var destinationImg = new Image();
-    destinationImg.src = 'portal.png';
+    destinationImg.src = 'https://raw.githubusercontent.com/tanoojoy/hackathon/main/portal.png';
 
     // Draw the image when it has loaded
     img.onload = function() {
