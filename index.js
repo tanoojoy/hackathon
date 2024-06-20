@@ -45,8 +45,7 @@ app.get('/get_questions', (req, res) => {
         
         const query = {};
         const options = {
-            // Include only the `title` and `imdb` fields in each returned document
-            projection: { _id: 0, question: 1, answer: 1 },
+            projection: { _id: 0, question: 1},
           };
         const result = await collection.find(query, options);
 
