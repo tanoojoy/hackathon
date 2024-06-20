@@ -49,11 +49,7 @@ app.get('/get_questions', (req, res) => {
           };
         const result = await collection.findOne(query, options);
 
-        for await (const doc of result) {
-            console.dir(doc);
-        }
-        
-        res.status(200);
+        res.status(200).send(result.question);
         
     });
 });
