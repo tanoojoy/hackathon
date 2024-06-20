@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Quiz</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <button id="openPopupBtn">Open Quiz</button>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopupBtn" class="close">&times;</span>
+            <h2>Quiz Question</h2>
+            <p>What is the capital of France?</p>
+            <form id="quizForm">
+                <label>
+                    <input type="radio" name="answer" value="A"> A. Berlin
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="B"> B. Madrid
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="C"> C. Paris
+                </label><br>
+                <label>
+                    <input type="radio" name="answer" value="D"> D. Rome
+                </label><br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

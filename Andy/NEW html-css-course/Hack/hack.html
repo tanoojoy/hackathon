@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple JS Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        #gameContainer {
+            position: relative;
+            width: 800px;
+            height: 100px;
+            background-color: #fff;
+            border: 2px solid #000;
+        }
+        #player {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            top: 35px;
+            left: 0;
+        }
+        #chest {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: gold;
+            top: 35px;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="player"></div>
+        <div id="chest"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
