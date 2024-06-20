@@ -136,10 +136,10 @@ function question_1(){
     $.ajax(settings).done(function (response) {
         console.log(response.question);
         question.innerHTML = response.question;
-        answer1.value = response.answer1;
-        answer2.value = response.answer2;
-        answer3.value = response.answer3;
-        answer4.value = response.answer4;
+        answer1.innerHTML = response.answer1;
+        answer2.innerHTML = response.answer2;
+        answer3.innerHTML = response.answer3;
+        answer4.innerHTML = response.answer4;
     });
 }
     </script>
