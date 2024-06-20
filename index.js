@@ -50,7 +50,7 @@ app.get('/get_easy_question1', (req, res) => {
         
         const query = { difficulty: "easy1" };
         const options = {
-            projection: { _id: 0, question: 1},
+            projection: { _id: 0, question: 1, answer1: 1, answer2: 1, answer3: 1, answer4: 1},
           };
         const result = await collection.findOne(query, options);
 

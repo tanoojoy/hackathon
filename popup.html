@@ -66,16 +66,16 @@
             <p id="question">What is the capital of France?</p>
             <form id="quizForm">
                 <label>
-                    <input type="radio" name="answer" value="A"> A. Berlin
+                    <input id="answer1" type="radio" name="answer" value="A"> A. Berlin
                 </label><br>
                 <label>
-                    <input type="radio" name="answer" value="B"> B. Madrid
+                    <input id="answer2" type="radio" name="answer" value="B"> B. Madrid
                 </label><br>
                 <label>
-                    <input type="radio" name="answer" value="C"> C. Paris
+                    <input id="answer3" type="radio" name="answer" value="C"> C. Paris
                 </label><br>
                 <label>
-                    <input type="radio" name="answer" value="D"> D. Rome
+                    <input id="answer4" type="radio" name="answer" value="D"> D. Rome
                 </label><br><br>
                 <button type="submit">Submit</button>
             </form>
@@ -123,6 +123,11 @@
 
 function question_1(){
     var question = document.getElementById("question");
+    var answer1 = document.getElementById("answer1");
+    var answer2 = document.getElementById("answer2");
+    var answer3 = document.getElementById("answer3");
+    var answer4 = document.getElementById("answer4");
+
     var settings = {
         "url": "https://curtin-hackathon-e6d04ff2588d.herokuapp.com/get_easy_question1",
         "method": "GET",
@@ -131,6 +136,10 @@ function question_1(){
     $.ajax(settings).done(function (response) {
         console.log(response.question);
         question.innerHTML = response.question;
+        answer1.value = response.answer1;
+        answer2.value = response.answer2;
+        answer3.value = response.answer3;
+        answer4.value = response.answer4;
     });
 }
     </script>
