@@ -43,11 +43,11 @@ app.get('/get_questions', (req, res) => {
     
     Promise.all([connect_db]).then(async function(response){
         
-        const query = {};
+        const query = { difficulty: "easy" };
         const options = {
             projection: { _id: 0, question: 1},
           };
-        const result = await collection.find(query, options);
+        const result = await collection.findOne(query, options);
 
         for await (const doc of result) {
             console.dir(doc);
