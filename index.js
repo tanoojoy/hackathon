@@ -12,7 +12,7 @@ const db_client = monogo_db_init();
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/canvas.html'));
+    res.sendFile(path.join(__dirname, 'views/canvas.html'));
 })
 
 app.post('/get_nickname', (req, res) => {
