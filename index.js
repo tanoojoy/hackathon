@@ -32,7 +32,7 @@ app.post('/get_nickname', (req, res) => {
 	
 });
 
-app.get('/get_questions', (req, res) => {
+app.get('/get_easy_question1', (req, res) => {
 
     const connect_db = new Promise(async function(resolve, reject){
         await db_client.connect();
@@ -43,7 +43,51 @@ app.get('/get_questions', (req, res) => {
     
     Promise.all([connect_db]).then(async function(response){
         
-        const query = { difficulty: "easy" };
+        const query = { difficulty: "easy1" };
+        const options = {
+            projection: { _id: 0, question: 1},
+          };
+        const result = await collection.findOne(query, options);
+
+        res.status(200).send(result);
+        
+    });
+});
+
+app.get('/get_easy_question2', (req, res) => {
+
+    const connect_db = new Promise(async function(resolve, reject){
+        await db_client.connect();
+        const database = db_client.db(database_name);   //replace with your database name
+        collection = database.collection('Questions');  //replace with your database collection name
+        resolve(collection);
+    }); 
+    
+    Promise.all([connect_db]).then(async function(response){
+        
+        const query = { difficulty: "easy2" };
+        const options = {
+            projection: { _id: 0, question: 1, answer1: 1, answer2: 1, answer3: 1, answer4: 1, correct_answe: 1},
+          };
+        const result = await collection.findOne(query, options);
+
+        res.status(200).send(result.question);
+        
+    });
+});
+
+app.get('/get_easy_question3', (req, res) => {
+
+    const connect_db = new Promise(async function(resolve, reject){
+        await db_client.connect();
+        const database = db_client.db(database_name);   //replace with your database name
+        collection = database.collection('Questions');  //replace with your database collection name
+        resolve(collection);
+    }); 
+    
+    Promise.all([connect_db]).then(async function(response){
+        
+        const query = { difficulty: "easy3" };
         const options = {
             projection: { _id: 0, question: 1},
           };
@@ -53,7 +97,6 @@ app.get('/get_questions', (req, res) => {
         
     });
 });
- 
 
 function monogo_db_init(){
     const uri = connection_String;
