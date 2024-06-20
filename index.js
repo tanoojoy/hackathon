@@ -10,7 +10,7 @@ app.use(bodyParser());
 const db_client = monogo_db_init();
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/popup.html'));
+    res.sendFile(path.join(__dirname, '/canvas.html'));
 })
 
 app.post('/get_nickname', (req, res) => {

@@ -1,4 +1,11 @@
 window.onload = function() {
+    var guyX = 10;
+    var guyY = 25;  // Initial y position of the guy
+    var speed = 5;  // Movement speed
+
+    var chestX = 475; // x position of the chest
+    var chestY = 25;  // y position of the chest
+
     // Get the background canvas and context
     var backgroundCanvas = document.getElementById('backgroundCanvas');
     var backgroundCtx = backgroundCanvas.getContext('2d');
@@ -18,23 +25,23 @@ window.onload = function() {
 
     // draw background
     var img = new Image();
-    img.src = '/grass.png';  // Replace with the path to your image
+    img.src = 'grass.png';  // Replace with the path to your image
 
     //draw wall
     var wall = new Image();
-    wall.src = '/block.png';
+    wall.src = 'block.png';
 
     //draw guy
     var guyImg = new Image();
-    guyImg.src = '/guy.jpg';
+    guyImg.src = 'guy.jpg';
 
     //draw chest
     var chestImg = new Image();
-    chestImg.src = '/chest.png';
+    chestImg.src = 'chest.png';
 
     //draw portal
     var destinationImg = new Image();
-    destinationImg.src = '/portal.png';
+    destinationImg.src = 'portal.png';
 
     // Draw the image when it has loaded
     img.onload = function() {
@@ -66,16 +73,41 @@ window.onload = function() {
         wallsCtx.restore();
 
         // Draw the guy image
-        // var guyX = horizontalOffset;
+        
         // var guyY = 20;  // Position below the top wall
-        wallsCtx.drawImage(guyImg, 10, 25, 40, 40);
+        wallsCtx.drawImage(guyImg, guyX, guyY, 40, 40);
 
         //draw chest image
-        wallsCtx.drawImage(chestImg, 475, 25, 40, 40);
+        wallsCtx.drawImage(chestImg, chestX, chestY, 40, 40);
 
         //draw destination image
         wallsCtx.drawImage(destinationImg, 475, 500, 40, 40);
     }
+
+    function checkCollision() {
+        // Define the bounding boxes of the guy and the chest
+        var guyRect = {x: guyX, y: guyY, width: 40, height: 40};
+        var chestRect = {x: chestX, y: chestY, width: 40, height: 40};
+
+        // Check for collision
+        if (guyRect.x < chestRect.x + chestRect.width &&
+            guyRect.x + guyRect.width > chestRect.x &&
+            guyRect.y < chestRect.y + chestRect.height &&
+            guyRect.y + guyRect.height > chestRect.y) {
+            open_popup();
+        }
+    }
+
+    document.addEventListener('keydown', (event) => {
+        switch(event.key) {
+            case 'ArrowRight':
+                guyX += speed;
+                break;
+            // Add cases for other arrow keys if needed
+        }
+        drawWalls();  // Redraw the walls and guy image
+        checkCollision();
+    });
 
     // Initial canvas setup
     resizeBackgroundCanvas();
